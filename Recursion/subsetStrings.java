@@ -1,9 +1,10 @@
 package Recursion;
 import java.util.*;
 public class subsetStrings {
+	
 	static void subset(String s, String curr, int i) {
 		if(i == s.length()) {
-			System.out.print(s + " ");
+			System.out.print(curr + " ");
 			return;
 		}
 		subset(s, curr, i+1);
@@ -13,10 +14,8 @@ public class subsetStrings {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.nextLine();
-		String curr = "";
-		int i = 0;
-		subset(s, curr, i);
 		
+		subset(s, "", 0);		
 
 	}
 
